@@ -64,6 +64,7 @@ enableForwardedWhitelist: true
 whitelist:
   - ::1
   - 127.0.0.1
+  - localhost
 # Automatically whitelist Docker host and gateway IPs
 whitelistDockerHosts: true
 # Toggle basic authentication for endpoints
@@ -101,7 +102,7 @@ requestProxy:
   url: "socks5://username:password@example.com:1080"
   # Proxy bypass list. Requests to these hosts won't be routed through the proxy.
   bypass:
-    - localhost
+    - 172.20.0.1
     - 127.0.0.1
 # Enable multi-user mode
 enableUserAccounts: false
